@@ -1,0 +1,100 @@
+schema: '2.0'
+stages:
+  data_ingetion:
+    cmd: python  ./src/data/data_ingetion.py
+    deps:
+    - path: ./src/data/data_ingetion.py
+      hash: md5
+      md5: 25ee9913b2e2645aec5c82c4f3562f6a
+      size: 671
+    params:
+      params.yaml:
+        data_ingetion.random_state: 42
+        data_ingetion.test_size: 0.5
+    outs:
+    - path: ./data/raw/test.csv
+      hash: md5
+      md5: 36f80b13b50d92d05c65d2dd21e0b7a5
+      size: 1185
+    - path: ./data/raw/train.csv
+      hash: md5
+      md5: 41f1c8e3bfb15c70a5898f8ebf223243
+      size: 1189
+  feature_eg:
+    cmd: python ./src/features/feature_eg.py
+    deps:
+    - path: ./data/raw/test.csv
+      hash: md5
+      md5: 36f80b13b50d92d05c65d2dd21e0b7a5
+      size: 1185
+    - path: ./data/raw/train.csv
+      hash: md5
+      md5: 41f1c8e3bfb15c70a5898f8ebf223243
+      size: 1189
+    - path: ./src/features/feature_eg.py
+      hash: md5
+      md5: dd3399d7840b5d0bde1915222e258c20
+      size: 1344
+    params:
+      params.yaml:
+        feature_eg.n_components: 4
+    outs:
+    - path: ./data/processed/test_processed.csv
+      hash: md5
+      md5: 4835410f21395e01928bde0439afa40f
+      size: 4088
+    - path: ./data/processed/train_processed.csv
+      hash: md5
+      md5: 1a8708dc2fa125cda52d1a440922ce86
+      size: 4102
+  train_model:
+    cmd: python ./src/models/train_model.py
+    deps:
+    - path: ./data/processed/train_processed.csv
+      hash: md5
+      md5: 1a8708dc2fa125cda52d1a440922ce86
+      size: 4102
+    - path: ./src/models/train_model.py
+      hash: md5
+      md5: 07640295ab95aac6620e69bc3402d14a
+      size: 709
+    params:
+      params.yaml:
+        train_model.bootstrap: false
+        train_model.criterion: gini
+        train_model.max_depth: 5
+        train_model.n_estimators: 16
+    outs:
+    - path: ./models/model.joblib
+      hash: md5
+      md5: ac8c07685ef7a23d8a962e34895ec6cb
+      size: 42329
+  predict_model:
+    cmd: python ./src/models/predict_model.py
+    deps:
+    - path: ./data/processed/test_processed.csv
+      hash: md5
+      md5: 4835410f21395e01928bde0439afa40f
+      size: 4088
+    - path: ./models/model.joblib
+      hash: md5
+      md5: ac8c07685ef7a23d8a962e34895ec6cb
+      size: 42329
+    - path: ./src/models/predict_model.py
+      hash: md5
+      md5: 1446f6ec32c655eb3ab1a40f9ed11dc0
+      size: 2306
+    params:
+      params.yaml:
+        data_ingetion.random_state: 42
+        data_ingetion.test_size: 0.5
+        feature_eg.n_components: 4
+        train_model.bootstrap: false
+        train_model.criterion: gini
+        train_model.max_depth: 5
+        train_model.n_estimators: 16
+    outs:
+    - path: dvclive/metrics.json
+      hash: md5
+      md5: 5b4be7eac1f62e935ea4f1e6408e8825
+      size: 142

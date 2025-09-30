@@ -9,6 +9,8 @@ from pathlib import Path
 import mlflow
 import mlflow.sklearn
 import matplotlib.pyplot as plt
+import dagshub
+dagshub.init(repo_owner='washim04x',repo_name='mlflow-daghub-demo',mlflow=True)
 # import seaborn as sns
 
 cur_dir=Path(__file__)
@@ -16,7 +18,8 @@ parent_dir=cur_dir.parent.parent.parent
 params_path=parent_dir.as_posix()+'/params.yaml'
 params=yaml.safe_load(open(params_path))
 
-
+mlflow.set_tracking_uri("https://dagshub.com/washim04x/mlflow-daghub-demo.mlflow")
+mlflow.set_experiment('student-dt')
 
 with mlflow.start_run():
     
