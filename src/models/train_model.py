@@ -35,7 +35,7 @@ grid_search = GridSearchCV(estimator=rf, param_grid=params_grid, cv=3, n_jobs=-1
 # mlflow.set_tracking_uri("https://dagshub.com/washim04x/mlflow-daghub-demo.mlflow")
 mlflow.set_tracking_uri("http://127.0.0.1:5000")   # local tracking server
 mlflow.set_experiment('student-dt')
-# mlflow.sklearn.autolog(log_models=False)  # Disable autologging of models to customize
+mlflow.sklearn.autolog(log_models=False)  # Disable autologging of models to customize
 
 with mlflow.start_run(description="Best hyperparameter trained rf model") as parent:
     # Train model
