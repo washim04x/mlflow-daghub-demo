@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/27168c9afbf74291a5e6706ecb5e2b1c/artifacts
+end_time: 1759338274931
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 27168c9afbf74291a5e6706ecb5e2b1c
+run_name: dashing-hound-406
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759338274698
+status: 3
+tags: []
+user_id: ABDUL AZIZ

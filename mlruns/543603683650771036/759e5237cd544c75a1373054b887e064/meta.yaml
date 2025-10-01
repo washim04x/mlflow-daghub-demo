@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/759e5237cd544c75a1373054b887e064/artifacts
+end_time: 1759337831071
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 759e5237cd544c75a1373054b887e064
+run_name: polite-owl-589
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337830892
+status: 3
+tags: []
+user_id: ABDUL AZIZ

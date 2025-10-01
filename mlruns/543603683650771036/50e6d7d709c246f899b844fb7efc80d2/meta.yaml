@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/50e6d7d709c246f899b844fb7efc80d2/artifacts
+end_time: 1759337790289
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 50e6d7d709c246f899b844fb7efc80d2
+run_name: skittish-panda-196
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337790110
+status: 3
+tags: []
+user_id: ABDUL AZIZ

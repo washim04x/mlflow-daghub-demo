@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/40be19b777764b968a3588a16f4a93c5/artifacts
+end_time: 1759338275750
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 40be19b777764b968a3588a16f4a93c5
+run_name: mysterious-seal-148
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759338253220
+status: 3
+tags: []
+user_id: ABDUL AZIZ

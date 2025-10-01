@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/2c3c6987783a41aba457653b8ee00f20/artifacts
+end_time: 1759336946763
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 2c3c6987783a41aba457653b8ee00f20
+run_name: caring-quail-598
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759336946558
+status: 3
+tags: []
+user_id: ABDUL AZIZ

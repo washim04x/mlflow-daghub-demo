@@ -1,0 +1,30 @@
+artifact_path: mlflow-artifacts:/543603683650771036/models/m-eac9944db9d5412e9af67224b2649238/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.6
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+is_signature_from_type_hint: false
+mlflow_version: 3.3.1
+model_id: m-eac9944db9d5412e9af67224b2649238
+model_size_bytes: 26234
+model_uuid: m-eac9944db9d5412e9af67224b2649238
+prompts: null
+run_id: 02995948b04c47afbc5970a8f778328b
+signature:
+  inputs: '[{"type": "double", "name": "PC1", "required": true}, {"type": "double",
+    "name": "PC2", "required": true}, {"type": "double", "name": "PC3", "required":
+    true}, {"type": "double", "name": "PC4", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-10-01 16:47:27.144919'

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/86017e406fd34c43b25c59930cc2e914/artifacts
+end_time: 1759337446399
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 86017e406fd34c43b25c59930cc2e914
+run_name: trusting-gnu-906
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337446221
+status: 3
+tags: []
+user_id: ABDUL AZIZ

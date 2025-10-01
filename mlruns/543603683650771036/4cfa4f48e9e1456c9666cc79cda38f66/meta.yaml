@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/4cfa4f48e9e1456c9666cc79cda38f66/artifacts
+end_time: 1759337670307
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 4cfa4f48e9e1456c9666cc79cda38f66
+run_name: bald-newt-68
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337670125
+status: 3
+tags: []
+user_id: ABDUL AZIZ

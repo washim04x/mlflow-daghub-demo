@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/54e87f4571584f9db803309e923b7b9a/artifacts
+end_time: 1759336945409
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 54e87f4571584f9db803309e923b7b9a
+run_name: clean-foal-39
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759336920576
+status: 3
+tags: []
+user_id: ABDUL AZIZ

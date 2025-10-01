@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/de5874cd98f042988b5244c293d9c036/artifacts
+end_time: 1759336945949
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: de5874cd98f042988b5244c293d9c036
+run_name: omniscient-shoat-307
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759336945752
+status: 3
+tags: []
+user_id: ABDUL AZIZ

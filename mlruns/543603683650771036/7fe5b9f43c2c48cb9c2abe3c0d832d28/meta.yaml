@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/7fe5b9f43c2c48cb9c2abe3c0d832d28/artifacts
+end_time: 1759337790525
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 7fe5b9f43c2c48cb9c2abe3c0d832d28
+run_name: crawling-ram-993
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337790346
+status: 3
+tags: []
+user_id: ABDUL AZIZ

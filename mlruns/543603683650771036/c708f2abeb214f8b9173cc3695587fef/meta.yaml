@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/c708f2abeb214f8b9173cc3695587fef/artifacts
+end_time: 1759337830590
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: c708f2abeb214f8b9173cc3695587fef
+run_name: skillful-tern-681
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337830395
+status: 3
+tags: []
+user_id: ABDUL AZIZ

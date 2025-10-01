@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/02995948b04c47afbc5970a8f778328b/artifacts
+end_time: 1759337256108
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 02995948b04c47afbc5970a8f778328b
+run_name: loud-squid-651
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337236398
+status: 3
+tags: []
+user_id: ABDUL AZIZ

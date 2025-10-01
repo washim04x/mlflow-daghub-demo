@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/b657eaaaa35340acabb7ee578420d6d4/artifacts
+end_time: 1759339057251
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: b657eaaaa35340acabb7ee578420d6d4
+run_name: wistful-croc-958
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759339057069
+status: 3
+tags: []
+user_id: ABDUL AZIZ

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/5e6543b808aa4cc9856067f6d166f9d9/artifacts
+end_time: 1759336946494
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 5e6543b808aa4cc9856067f6d166f9d9
+run_name: bemused-bug-693
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759336946284
+status: 3
+tags: []
+user_id: ABDUL AZIZ

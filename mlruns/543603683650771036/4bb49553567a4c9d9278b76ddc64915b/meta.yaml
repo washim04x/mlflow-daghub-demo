@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/4bb49553567a4c9d9278b76ddc64915b/artifacts
+end_time: 1759337446163
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 4bb49553567a4c9d9278b76ddc64915b
+run_name: incongruous-colt-905
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337445978
+status: 3
+tags: []
+user_id: ABDUL AZIZ

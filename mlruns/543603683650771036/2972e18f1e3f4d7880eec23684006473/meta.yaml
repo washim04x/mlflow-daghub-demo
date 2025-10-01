@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/2972e18f1e3f4d7880eec23684006473/artifacts
+end_time: 1759337246671
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 2972e18f1e3f4d7880eec23684006473
+run_name: resilient-doe-590
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337246471
+status: 3
+tags: []
+user_id: ABDUL AZIZ

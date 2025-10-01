@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/543603683650771036/65e17d815bbf4cec95b0ff82a4a6a0ac/artifacts
+end_time: 1759337246417
+entry_point_name: ''
+experiment_id: '543603683650771036'
+lifecycle_stage: active
+run_id: 65e17d815bbf4cec95b0ff82a4a6a0ac
+run_name: calm-dove-188
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759337246237
+status: 3
+tags: []
+user_id: ABDUL AZIZ
