@@ -10,6 +10,8 @@ import mlflow
 import mlflow.sklearn
 import matplotlib.pyplot as plt
 import dagshub
+import seaborn as sns
+from sklearn.metrics import confusion_matrix
 dagshub.init(repo_owner='washim04x',repo_name='mlflow-daghub-demo',mlflow=True)
 # import seaborn as sns
 
@@ -20,6 +22,7 @@ params=yaml.safe_load(open(params_path))
 
 mlflow.set_tracking_uri("https://dagshub.com/washim04x/mlflow-daghub-demo.mlflow")
 mlflow.set_experiment('student-dt')
+
 
 with mlflow.start_run():
     
@@ -42,14 +45,35 @@ with mlflow.start_run():
     rec = recall_score(y_test, y_pred, average='weighted')
     f1 = f1_score(y_test, y_pred, average='weighted')
 
-    mlflow.log_metric('Accuracy Score',acc)
-    mlflow.log_metric('Precision Score',prec)
-    mlflow.log_metric('Recall Score',rec)
-    mlflow.log_metric('F1 Score',f1)
+    # mlflow.log_metric('Accuracy Score',acc)
+    # mlflow.log_metric('Precision Score',prec)
+    # mlflow.log_metric('Recall Score',rec)
+    # mlflow.log_metric('F1 Score',f1)
 
-    for param,value in params.items():
-        for key,value in value.items():
-            mlflow.log_param(f'{param}_{key}',value)
+    cm=confusion_matrix(y_test, y_pred)
+    plt.figure(figsize=(8,6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+    plt.xlabel('Predicted')
+    plt.ylabel('Actual')
+    plt.title('Confusion Matrix')
+    plt.savefig('confusion_matrix.png')
+    # mlflow.log_artifact('confusion_matrix.png')
+    # plt.close()
+    # mlflow.log_artifact(parent_dir.as_posix() + "/models/model.joblib", artifact_path="model")
+    # mlflow.log_artifact(__file__)
+    # mlflow.set_tag('autor','washim')
+
+    # # logging data set
+    train_df=mlflow.data.from_pandas(pd.read_csv(parent_dir.as_posix()+'/data/processed/train_processed.csv'))
+    test_df=mlflow.data.from_pandas(pd.read_csv(parent_dir.as_posix()+'/data/processed/test_processed.csv'))
+    # mlflow.log_input(train_df,'train_data')
+    # mlflow.log_input(test_df,'test_data')
+
+
+
+    # for param,value in params.items():
+    #     for key,value in value.items():
+    #         mlflow.log_param(f'{param}_{key}',value)
 
 
 
@@ -73,6 +97,8 @@ with mlflow.start_run():
 
     with open('metric.json','w') as f:
         json.dump(metric,f,indent=4)
+
+    # mlflow.set_tag('autor','washim')
 
 
 

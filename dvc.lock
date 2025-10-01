@@ -82,8 +82,8 @@ stages:
       size: 42329
     - path: ./src/models/predict_model.py
       hash: md5
-      md5: 1446f6ec32c655eb3ab1a40f9ed11dc0
-      size: 2306
+      md5: 4c1ed7aed893a6fc65707fad5cb78ab3
+      size: 3253
     params:
       params.yaml:
         data_ingetion.random_state: 42
