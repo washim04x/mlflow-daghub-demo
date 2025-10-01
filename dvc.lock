@@ -56,8 +56,8 @@ stages:
       size: 4102
     - path: ./src/models/train_model.py
       hash: md5
-      md5: 07640295ab95aac6620e69bc3402d14a
-      size: 709
+      md5: 32e2a135909b37d196d6f16702db93cd
+      size: 2356
     params:
       params.yaml:
         train_model.bootstrap: false
@@ -67,8 +67,8 @@ stages:
     outs:
     - path: ./models/model.joblib
       hash: md5
-      md5: ac8c07685ef7a23d8a962e34895ec6cb
-      size: 42329
+      md5: cb730ea7c54929cda025ba91f1f1fb28
+      size: 43609
   predict_model:
     cmd: python ./src/models/predict_model.py
     deps:
@@ -82,8 +82,8 @@ stages:
       size: 42329
     - path: ./src/models/predict_model.py
       hash: md5
-      md5: ad100ef66194b419a9906625b2a843ef
-      size: 3285
+      md5: 52c0407ef55b8685bd67cfb7013db369
+      size: 3307
     params:
       params.yaml:
         data_ingetion.random_state: 42
