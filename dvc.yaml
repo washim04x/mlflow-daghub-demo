@@ -34,29 +34,19 @@ stages:
     - train_model.criterion
     outs:
     - ./models/model.joblib
-    # - dvclive/metrics.json
+   
 
-  # predict_model:
-  #   cmd: python ./src/models/predict_model.py
-  #   deps:
-  #   - ./src/models/predict_model.py
-  #   - ./models/model.joblib
-  #   - ./data/processed/test_processed.csv
-  #   params:
-  #   - data_ingetion.test_size
-  #   - data_ingetion.random_state
-  #   - feature_eg.n_components
-  #   - train_model.n_estimators
-  #   - train_model.max_depth
-  #   - train_model.bootstrap
-  #   - train_model.criterion
-  #   outs:
-  #   - dvclive/metrics.json
-
-params:
-- dvclive/params.yaml
-metrics:
-- dvclive/metrics.json
-plots:
-- dvclive/plots/metrics:
-    x: step
+  predict_model:
+    cmd: python ./src/models/predict_model.py
+    deps:
+    - ./src/models/predict_model.py
+    - ./models/model.joblib
+    - ./data/processed/test_processed.csv
+    params:
+    - data_ingetion.test_size
+    - data_ingetion.random_state
+    - feature_eg.n_components
+    - train_model.n_estimators
+    - train_model.max_depth
+    - train_model.bootstrap
+    - train_model.criterion
