@@ -45,14 +45,14 @@ with mlflow.start_run(description="Best hyperparameter trained rf model") as par
 
     # Save the best model locally
     best_model = grid_search.best_estimator_
-    joblib.dump(best_model, parent_dir / 'models/model.joblib')
+    
 
     # log the model properly with signature (only once)
     signature = mlflow.models.infer_signature(x_train, best_model.predict(x_train))
     mlflow.sklearn.log_model(
         sk_model=best_model,
         name="rf_model",
-        signature=signature,
+        signature=signature
     )
 
 
@@ -66,7 +66,7 @@ with mlflow.start_run(description="Best hyperparameter trained rf model") as par
     # Save source code
     mlflow.log_artifact(__file__)
 
-     # Log all candidate runs as nested runs
+    # Log all candidate runs as nested runs
     for i, v in enumerate(grid_search.cv_results_['params']):
         with mlflow.start_run(nested=True) as child:
             mlflow.log_params(v)
@@ -79,6 +79,9 @@ with mlflow.start_run(description="Best hyperparameter trained rf model") as par
     run_id = parent.info.run_id
     with open(parent_dir / 'models' / 'run_id.txt', 'w') as f:
         f.write(run_id)
+    
+    joblib.dump(best_model, parent_dir / 'models/model.joblib')
 
 # Force flush run to tracking server
 # mlflow.end_run()
+# mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlartifacts --host 127.0.0.1 --port 5000``

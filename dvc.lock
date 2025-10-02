@@ -56,8 +56,8 @@ stages:
       size: 4102
     - path: ./src/models/train_model.py
       hash: md5
-      md5: b865b3ee0bfcaa3c277ef0ee2dd054bd
-      size: 2864
+      md5: 42f6e6c1b308d6dd5def2b1a45a0cd00
+      size: 2996
     params:
       params.yaml:
         train_model.bootstrap:
@@ -65,15 +65,15 @@ stages:
         train_model.criterion:
         - gini
         train_model.max_depth:
+        - None
         - 5
-        - 10
         train_model.n_estimators:
         - 10
         - 20
     outs:
     - path: ./models/model.joblib
       hash: md5
-      md5: 8cdf98bc64a9ed05193093582294d52c
+      md5: 1140766e630e1f09ccbc4e0730424053
       size: 27449
   predict_model:
     cmd: python ./src/models/predict_model.py
@@ -84,7 +84,7 @@ stages:
       size: 4088
     - path: ./models/model.joblib
       hash: md5
-      md5: 8cdf98bc64a9ed05193093582294d52c
+      md5: 1140766e630e1f09ccbc4e0730424053
       size: 27449
     - path: ./src/models/predict_model.py
       hash: md5
@@ -100,8 +100,8 @@ stages:
         train_model.criterion:
         - gini
         train_model.max_depth:
+        - None
         - 5
-        - 10
         train_model.n_estimators:
         - 10
         - 20
