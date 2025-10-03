@@ -7,6 +7,6 @@ feature_eg:
 
 train_model:
   n_estimators: [10,20]
-  max_depth: ["None",5]
-  bootstrap: [false]
+  max_depth: ["None",3,5]
+  bootstrap: [false,True]
   criterion: [gini]
